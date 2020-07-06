@@ -34,6 +34,7 @@ class GFTextField: UITextField {
         adjustsFontSizeToFitWidth = true
         minimumFontSize = 12
         
+        returnKeyType = .go
         backgroundColor = .systemBackground
         autocorrectionType = .no
         placeholder = "User Name"

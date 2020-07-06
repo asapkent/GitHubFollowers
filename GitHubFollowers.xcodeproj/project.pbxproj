@@ -15,6 +15,7 @@
 		9F852E8724B21B8E0064892B /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F852E8624B21B8E0064892B /* FavoritesListVC.swift */; };
 		9F852E8924B2608C0064892B /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F852E8824B2608C0064892B /* GFButton.swift */; };
 		9F852E8B24B275A30064892B /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F852E8A24B275A30064892B /* GFTextField.swift */; };
+		9F852E8D24B29EA50064892B /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F852E8C24B29EA50064892B /* FollowerListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9F852E8624B21B8E0064892B /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 		9F852E8824B2608C0064892B /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		9F852E8A24B275A30064892B /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		9F852E8C24B29EA50064892B /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				9F852E7B24B145DF0064892B /* LaunchScreen.storyboard */,
 				9F852E7E24B145DF0064892B /* Info.plist */,
 				9F852E8424B21B070064892B /* SearchVC.swift */,
+				9F852E8C24B29EA50064892B /* FollowerListVC.swift */,
 				9F852E8624B21B8E0064892B /* FavoritesListVC.swift */,
 				9F852E8A24B275A30064892B /* GFTextField.swift */,
 			);
@@ -147,6 +150,7 @@
 				9F852E8724B21B8E0064892B /* FavoritesListVC.swift in Sources */,
 				9F852E8924B2608C0064892B /* GFButton.swift in Sources */,
 				9F852E8524B21B070064892B /* SearchVC.swift in Sources */,
+				9F852E8D24B29EA50064892B /* FollowerListVC.swift in Sources */,
 				9F852E7124B145DB0064892B /* AppDelegate.swift in Sources */,
 				9F852E7324B145DB0064892B /* SceneDelegate.swift in Sources */,
 			);
