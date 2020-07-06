@@ -24,6 +24,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window?.rootViewController = createTabBarController()
         window?.makeKeyAndVisible()
+        
+        configureNavagationBar()
     }
     
     func createSearchNC() -> UINavigationController {
@@ -52,6 +54,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         return tabBar
      }
+    
+    func configureNavagationBar() {
+        //apperance() allows for this to be app wide
+        UINavigationBar.appearance().tintColor = .systemGreen
+    }
     
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
