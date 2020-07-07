@@ -10,6 +10,7 @@
 		9F24A5FF24B37FA9004D0300 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F24A5FE24B37FA9004D0300 /* UIViewController+Ext.swift */; };
 		9F24A60624B3C41F004D0300 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F24A60524B3C41F004D0300 /* Follower.swift */; };
 		9F24A60824B3C511004D0300 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F24A60724B3C511004D0300 /* User.swift */; };
+		9F24A60B24B3CF9D004D0300 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F24A60A24B3CF9D004D0300 /* NetworkManager.swift */; };
 		9F852E7124B145DB0064892B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F852E7024B145DB0064892B /* AppDelegate.swift */; };
 		9F852E7324B145DB0064892B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F852E7224B145DB0064892B /* SceneDelegate.swift */; };
 		9F852E7A24B145DF0064892B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F852E7924B145DF0064892B /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		9F24A5FE24B37FA9004D0300 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		9F24A60524B3C41F004D0300 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		9F24A60724B3C511004D0300 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9F24A60A24B3CF9D004D0300 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9F852E6D24B145DB0064892B /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F852E7024B145DB0064892B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F852E7224B145DB0064892B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9F24A60924B3CF75004D0300 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9F24A60A24B3CF9D004D0300 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		9F852E6424B145DB0064892B = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 		9F852E6F24B145DB0064892B /* GitHubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				9F24A60924B3CF75004D0300 /* Managers */,
 				9F24A60424B3C403004D0300 /* Model */,
 				9F24A60324B38E22004D0300 /* Support */,
 				9F24A60224B38DB8004D0300 /* Extension */,
@@ -206,6 +217,7 @@
 			files = (
 				9F24A60824B3C511004D0300 /* User.swift in Sources */,
 				9F852E8B24B275A30064892B /* GFTextField.swift in Sources */,
+				9F24A60B24B3CF9D004D0300 /* NetworkManager.swift in Sources */,
 				9F852E8724B21B8E0064892B /* FavoritesListVC.swift in Sources */,
 				9F852E8924B2608C0064892B /* GFButton.swift in Sources */,
 				9F24A5FF24B37FA9004D0300 /* UIViewController+Ext.swift in Sources */,
