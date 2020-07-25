@@ -49,9 +49,11 @@ class FollowerListVC: UIViewController {
     }
     
     func getFollowers(username: String, page: Int) {
+        showLoadingview()
         NetworkManager.shared.getFollowers(for: userName, page: page) { [weak self] result in
             // allows for "?" not be after self.
             guard let self = self else {return}
+              self.dismissLoadingview()
                    
                switch result {
                case .success(let followers):
