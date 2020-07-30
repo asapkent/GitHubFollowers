@@ -54,11 +54,16 @@ class FollowerListVC: UIViewController {
             // allows for "?" not be after self.
             guard let self = self else {return}
               self.dismissLoadingview()
-                   
                switch result {
                case .success(let followers):
                 if followers.count < 100 {self.hasMoreFollowers = false}
                 self.followers.append(contentsOf: followers)
+                
+                if self.followers.isEmpty {
+                    let messeage = "This user does not have any followers. Go follow them 🤯."
+                    DispatchQueue.main.async { self.showEmptyStateView(with: messeage, in: self.view) }
+                    return
+                }
                 self.updateData()
                case .failure(let error):
                     self.presentGFAlertOnMainThread(title: "Test", message: error.rawValue, buttonTitle: "Ok")
