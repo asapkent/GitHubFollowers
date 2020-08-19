@@ -9,6 +9,9 @@
 import UIKit
 
 class UserInfoVC: UIViewController {
+    
+    let headerView = UIView()
+    
     var username: String!
     
     override func viewDidLoad() {
