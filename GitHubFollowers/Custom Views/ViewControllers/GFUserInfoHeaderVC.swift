@@ -63,34 +63,34 @@ class GFUserInfoHeaderVC: UIViewController {
         
         
         NSLayoutConstraint.activate([
-            avitarImageView.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: padding),
-            avitarImageView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: padding),
+            avitarImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: padding),
+            avitarImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             avitarImageView.widthAnchor.constraint(equalToConstant: 90),
             avitarImageView.heightAnchor.constraint(equalToConstant: 90),
             
             usernameLabel.topAnchor.constraint(equalTo: avitarImageView.topAnchor),
-            usernameLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: avitarImageView.trailingAnchor, multiplier: textImagePadding),
-            usernameLabel.trailingAnchor.constraint(equalToSystemSpacingAfter: view.trailingAnchor, multiplier: -padding),
+            usernameLabel.leadingAnchor.constraint(equalTo: avitarImageView.trailingAnchor, constant: textImagePadding),
+            usernameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             usernameLabel.heightAnchor.constraint(equalToConstant: 38),
            
-            nameLabel.centerYAnchor.constraint(equalToSystemSpacingBelow: avitarImageView.centerYAnchor, multiplier: 8),
-            nameLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: avitarImageView.trailingAnchor, multiplier: textImagePadding),
-            nameLabel.trailingAnchor.constraint(equalToSystemSpacingAfter: view.trailingAnchor, multiplier: -padding),
+            nameLabel.centerYAnchor.constraint(equalTo: avitarImageView.centerYAnchor, constant: 8),
+            nameLabel.leadingAnchor.constraint(equalTo: avitarImageView.trailingAnchor, constant:  textImagePadding),
+            nameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             nameLabel.heightAnchor.constraint(equalToConstant: 38),
             
             locationImageView.bottomAnchor.constraint(equalTo: avitarImageView.bottomAnchor),
-            locationImageView.leadingAnchor.constraint(equalToSystemSpacingAfter: avitarImageView.trailingAnchor, multiplier: textImagePadding),
+            locationImageView.leadingAnchor.constraint(equalTo: avitarImageView.trailingAnchor, constant:  textImagePadding),
             locationImageView.widthAnchor.constraint(equalToConstant: 20),
             locationImageView.heightAnchor.constraint(equalToConstant: 20),
             
-            locationLabel.centerYAnchor.constraint(equalToSystemSpacingBelow: locationImageView.centerYAnchor, multiplier: 0),
-            locationLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: locationImageView.trailingAnchor, multiplier: 5),
-            locationLabel.trailingAnchor.constraint(equalToSystemSpacingAfter: view.trailingAnchor, multiplier: -padding),
+            locationLabel.centerYAnchor.constraint(equalTo: locationImageView.centerYAnchor, constant:  0),
+            locationLabel.leadingAnchor.constraint(equalTo: locationImageView.trailingAnchor, constant:  5),
+            locationLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             locationLabel.heightAnchor.constraint(equalToConstant: 20),
             
-            bioLabel.topAnchor.constraint(equalToSystemSpacingBelow: avitarImageView.bottomAnchor, multiplier: padding),
+            bioLabel.topAnchor.constraint(equalTo: avitarImageView.bottomAnchor,constant: textImagePadding),
             bioLabel.leadingAnchor.constraint(equalTo: avitarImageView.leadingAnchor),
-            bioLabel.trailingAnchor.constraint(equalToSystemSpacingAfter: view.trailingAnchor, multiplier: -padding),
+            bioLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             bioLabel.heightAnchor.constraint(equalToConstant: 60)
         ])
    }
