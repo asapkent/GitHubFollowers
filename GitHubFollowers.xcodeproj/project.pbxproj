@@ -34,6 +34,8 @@
 		9F852E8F24B364F90064892B /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F852E8E24B364F90064892B /* GFTitleLabel.swift */; };
 		9F852E9124B3670C0064892B /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F852E9024B3670C0064892B /* GFBodyLabel.swift */; };
 		9F852E9324B36A680064892B /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F852E9224B36A680064892B /* GFAlertVC.swift */; };
+		9FFAE332265DAAF300FCFF37 /* GFRepoitemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFAE331265DAAF300FCFF37 /* GFRepoitemVC.swift */; };
+		9FFAE334265DB39000FCFF37 /* GFFFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFAE333265DB39000FCFF37 /* GFFFollowerItemVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		9F852E8E24B364F90064892B /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		9F852E9024B3670C0064892B /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		9F852E9224B36A680064892B /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
+		9FFAE331265DAAF300FCFF37 /* GFRepoitemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFRepoitemVC.swift; sourceTree = "<group>"; };
+		9FFAE333265DB39000FCFF37 /* GFFFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFFollowerItemVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +202,8 @@
 			children = (
 				9F6E0D8324ECA57B000D2D0D /* GFUserInfoHeaderVC.swift */,
 				9F441FE725142DF600868B75 /* GFItemInfoVC.swift */,
+				9FFAE331265DAAF300FCFF37 /* GFRepoitemVC.swift */,
+				9FFAE333265DB39000FCFF37 /* GFFFollowerItemVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -269,7 +275,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = AsapInc;
 				TargetAttributes = {
 					9F852E6C24B145DB0064892B = {
@@ -330,9 +336,11 @@
 				9F852E9324B36A680064892B /* GFAlertVC.swift in Sources */,
 				9F852E9124B3670C0064892B /* GFBodyLabel.swift in Sources */,
 				9F24A60624B3C41F004D0300 /* Follower.swift in Sources */,
+				9FFAE332265DAAF300FCFF37 /* GFRepoitemVC.swift in Sources */,
 				9F6E0D8624ECA707000D2D0D /* GFSecondaryTitleLabel.swift in Sources */,
 				9F48DD4E24D32B150053D546 /* GFEmptyStateView.swift in Sources */,
 				9F852E8D24B29EA50064892B /* FollowerListVC.swift in Sources */,
+				9FFAE334265DB39000FCFF37 /* GFFFollowerItemVC.swift in Sources */,
 				9F852E8F24B364F90064892B /* GFTitleLabel.swift in Sources */,
 				9F852E7124B145DB0064892B /* AppDelegate.swift in Sources */,
 				9F852E7324B145DB0064892B /* SceneDelegate.swift in Sources */,
@@ -380,6 +388,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -440,6 +449,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
