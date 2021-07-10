@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum PersistenceActionType {
+    case add, remove
+}
+
 enum PersistenceManager {
     
     static private let defaults = UserDefaults.standard
@@ -27,6 +31,29 @@ enum PersistenceManager {
             completed(.success(favorites))
         } catch {
             completed(.failure(.unableToFavorite))
+        }
+    }
+    
+    static func updateWith(favorite: Follower, actionType: PersistenceActionType, completed: @escaping (GFError?) -> Void) {
+        retrieveFavorites { result in
+            switch result {
+            case .success(let favorites):
+                var retrievedFavorites = favorites
+                
+                switch actionType {
+                case .add:
+                    guard !retrievedFavorites.contains(favorite) else {
+                        completed(.alreadyInFavorites)
+                        return
+                    }
+                    retrievedFavorites.append(favorite)
+                case .remove:
+                    retrievedFavorites.removeAll {$0.login == favorite.login}
+                }
+                completed(save(favorites: favorites))
+            case .failure(let error):
+                completed(error)
+            }
         }
     }
     
