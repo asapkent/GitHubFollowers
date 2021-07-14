@@ -47,6 +47,8 @@ class FollowerListVC: UIViewController {
         collectionView.delegate = self
         collectionView.backgroundColor = .systemBackground
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = addButton
     }
     
     func configureSearchController() {
@@ -64,11 +66,11 @@ class FollowerListVC: UIViewController {
     }
     
     func getFollowers(username: String, page: Int) {
-        showLoadingview()
+        showLoadingView()
         NetworkManager.shared.getFollowers(for: userName, page: page) { [weak self] result in
             // allows for "?" not be after self.
             guard let self = self else {return}
-              self.dismissLoadingview()
+              self.dismissLoadingView()
                switch result {
                case .success(let followers):
                 if followers.count < 100 {self.hasMoreFollowers = false}
@@ -100,6 +102,30 @@ class FollowerListVC: UIViewController {
         snapShot.appendItems(followers)
         
         DispatchQueue.main.async { self.dataSource.apply(snapShot, animatingDifferences: true, completion: nil) }
+    }
+    
+    @objc func addButtonTapped() {
+        showLoadingView()
+        
+        NetworkManager.shared.getUserInfo(for: userName) { [weak self] result in
+            guard let self = self else { return }
+            self.dismissLoadingView()
+            
+            switch result {
+            case .success(let user):
+                let favorite = Follower(login: user.login, avatarUrl: user.avatarUrl)
+                PersistenceManager.updateWith(favorite: favorite, actionType: .add) { [weak self] error in
+                    guard let self = self else { return }
+                    guard let error = error else {
+                        self.presentGFAlertOnMainThread(title: "Success", message: "User added", buttonTitle: "ok")
+                        return
+                    }
+                    self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "ok")
+                }
+            case .failure(let error):
+                self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "ok")
+            }
+        }
     }
 }
 

@@ -21,7 +21,7 @@ extension UIViewController {
         }
     }
     
-    func showLoadingview() {
+    func showLoadingView() {
         containerView = UIView(frame: view.bounds)
         view.addSubview(containerView)
         containerView.backgroundColor = .systemBackground
@@ -40,7 +40,7 @@ extension UIViewController {
         activityIndicator.startAnimating()
     }
     
-    func dismissLoadingview() {
+    func dismissLoadingView() {
         DispatchQueue.main.async {
             containerView.removeFromSuperview()
             containerView = nil
