@@ -66,11 +66,11 @@ class FollowerListVC: UIViewController {
     }
     
     func getFollowers(username: String, page: Int) {
-        showLoadingview()
+        showLoadingView()
         NetworkManager.shared.getFollowers(for: userName, page: page) { [weak self] result in
             // allows for "?" not be after self.
             guard let self = self else {return}
-              self.dismissLoadingview()
+              self.dismissLoadingView()
                switch result {
                case .success(let followers):
                 if followers.count < 100 {self.hasMoreFollowers = false}
@@ -105,7 +105,27 @@ class FollowerListVC: UIViewController {
     }
     
     @objc func addButtonTapped() {
-        print("Add button pressed")
+        showLoadingView()
+        
+        NetworkManager.shared.getUserInfo(for: userName) { [weak self] result in
+            guard let self = self else { return }
+            self.dismissLoadingView()
+            
+            switch result {
+            case .success(let user):
+                let favorite = Follower(login: user.login, avatarUrl: user.avatarUrl)
+                PersistenceManager.updateWith(favorite: favorite, actionType: .add) { [weak self] error in
+                    guard let self = self else { return }
+                    guard let error = error else {
+                        self.presentGFAlertOnMainThread(title: "Success", message: "User added", buttonTitle: "ok")
+                        return
+                    }
+                    self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "ok")
+                }
+            case .failure(let error):
+                self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "ok")
+            }
+        }
     }
 }
 
